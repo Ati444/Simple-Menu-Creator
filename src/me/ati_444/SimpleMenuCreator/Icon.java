@@ -10,14 +10,22 @@ import org.bukkit.inventory.meta.ItemMeta;
  * @author Ati_444
  * 
  */
-public class Icon {
+public abstract class Icon {
 
 	private ItemStack itemStack;
 	private ItemMeta itemMeta;
 
-	
+	private String displayName;
+	private Material material;
+
 	public Icon(String displayName, Material material) {
-		// TODO Auto-generated constructor stub
+		itemStack = new ItemStack(material);
+
+	}
+
+	public void setItemMeta(ItemMeta itemMeta) {
+		itemStack.setItemMeta(itemMeta);
+		this.itemMeta = itemMeta;
 	}
 
 }
