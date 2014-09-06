@@ -15,6 +15,14 @@ public abstract class Inventory {
 	private String title;
 	private int rows;
 
+	/**
+	 * Constructor for an inventory
+	 * 
+	 * @param title
+	 *            title of the inventory
+	 * @param rows
+	 *            number of rows in the inventory
+	 */
 	public Inventory(String title, int rows) {
 		this.title = title;
 		this.rows = rows;
@@ -33,6 +41,7 @@ public abstract class Inventory {
 	 */
 	public void setItem(ItemStack item, int slot) {
 		// TODO
+		getInventory().setItem(slot, item);
 	}
 
 	/**
