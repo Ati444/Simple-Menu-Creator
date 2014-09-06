@@ -10,6 +10,8 @@ import org.bukkit.inventory.meta.ItemMeta;
  * 
  * @author Ati_444
  * 
+ *         <p>
+ *         All Right Reserved
  */
 public abstract class Icon {
 
