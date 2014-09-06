@@ -6,7 +6,7 @@ import org.bukkit.inventory.ItemStack;
 /**
  * 
  * @author Ati_444
- *         <P>
+ *         <p>
  *         All Rights Reserved
  */
 public abstract class Inventory {
