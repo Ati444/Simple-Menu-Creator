@@ -59,6 +59,7 @@ public abstract class Inventory {
 	 * @return the inventory
 	 */
 	public org.bukkit.inventory.Inventory getInventory() {
+		if (inventory != null) return inventory;
 		return inventory;
 	}
 

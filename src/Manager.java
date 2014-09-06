@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Manager {
 
-	private static Manager instance;
+	private static Manager instance = new Manager();;
 
 	private List<Inventory> inventories;
 	private static List<Icon> icons;
@@ -20,7 +20,6 @@ public class Manager {
 	}
 
 	public static Manager getInstance() {
-		instance = new Manager();
 		return instance;
 	}
 
@@ -46,13 +45,16 @@ public class Manager {
 
 	/**
 	 * Get an inventory using the inventories class name
-	 * @param inventorySimpleClassName the inventories class name
+	 * 
+	 * @param inventorySimpleClassName
+	 *            the inventories class name
 	 * @return the specified inventory
 	 */
 	public Inventory getInventory(String inventorySimpleClassName) {
 		for (Inventory i : inventories) {
 			if (i.getClass().getSimpleName()
-					.equalsIgnoreCase(inventorySimpleClassName))
+					.equalsIgnoreCase(inventorySimpleClassName)
+					&& i != null)
 				break;
 			return i;
 		}
